@@ -1,0 +1,38 @@
+<html>
+
+  <head>
+  </head>
+  <body>
+    <form>
+      Name  : <input type="text" name="name">
+      <input type="submit" name="myInputBtn" value ="Save To Cookie" onClick='var res = testValidate(); return res'> <br>
+      Phone : <input type="text" name="phone">
+      <input type="submit" value ="Delete Cookie"> 
+      <p id="error1"></p>
+    </form>
+  </body>
+
+  <script>
+    // nameText = document.getElementsByName('name')[0];
+    // submitBtn = nameText = document.getElementsByName('myInputBtn')[0];
+
+    // nameText.onchange=function(){testValidate(nameText)};
+    // nameText.onchange="testValidate(nameText)";
+
+    // submitBtn.onClick=function(){return false};
+    // nameText.onchange="testValidate(nameText)";
+
+    var testValidate = function() {
+      toValidate = document.getElementsByName('name')[0];
+      if (toValidate.value === "foo") {
+        var node=document.createTextNode('An Error Message!');
+        errorField = document.getElementById("error1");
+        errorField.appendChild(node);
+        // alert("stuff");
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</html>
