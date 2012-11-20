@@ -1,4 +1,3 @@
-// Your Jasmine specs here
 describe("factorial", function() {
   it("evaluates correctly for a single-digit number", function() {
     expect(factorial(5)).toEqual(120);
